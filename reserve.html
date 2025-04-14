@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reserve a Table</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reservation.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!--nav bar -->
+  <header class="black-navbar">
+    <h1>My Restaurant</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="reserve.html" class="active">Reserve</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="reservation-intro mockup-intro">
+      <h2>Reserve Your Table</h2>
+      <p>Choose your preferred time and seating area.</p>
+    </section>
+
+  <!--Button select table-->  
+<div class="start-reservation" style="text-align: center;">
+  <button id="startBtn">Select Table</button>
+</div>
+<!--table display section-->
+<div class="card-section" style="display: none;">
+  
+
+    <div class="table-legend" style="display: none;">
+      <span class="table available"> <i class="fas fa-circle"> </i> Available</span>
+      <span class="table selected"> <i class="fas fa-check-circle"> </i> Selected</span>
+      <span class="table reserved"> <i class="fas fa-lock"> </i> Reserved</span>
+    </div>
+
+    <div class="reservation-section" style="display: none;">
+      <div class="table-area">
+        <h3>Window</h3>
+        <div class="table-layout" id="area-window"></div>
+      </div>
+      <div class="table-area">
+        <h3>Patio</h3>
+        <div class="table-layout" id="area-patio"></div>
+      </div>
+      </div>
+
+      <div class="reservation-form" style="display: none;">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your Name">
+  
+        <label for="time">Time</label>
+        <input type="time" id="time" min="12:00" max="21:00" step="1800">
+  
+        <button id="confirmBtn">Confirm Reservation</button>
+      </div>
+  </div>
+  </main>
+
+  
+
+  <script src="reservation.js"></script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+
+/* ========== Reservation Page Styles Only ========== */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f8f8;
+  color: #333;
+}
+
+header {
+  background: #2e2e2e;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #fbc02d;
+}
+
+nav a.active {
+  border-bottom: 2px solid #ff7043;
+  color: #ff7043;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Mockup-styled intro */
+.mockup-intro {
+  background: #fff3e0;
+  padding: 2em;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin: 1em auto;
+  max-width: 800px;
+}
+
+.mockup-intro h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  color: #333;
+}
+
+.mockup-intro p {
+  font-size: 1.2em;
+  color: #555;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Form & layout container */
+.card-section {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  padding: 2.5em;
+  margin: 3em auto;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.card-section .reservation-form {
+  padding: 0 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reservation-form label {
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+  max-width: 400px;
+}
+
+.reservation-form input {
+  margin-bottom: 1em;
+  padding: 0.75em;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#confirmBtn {
+  background: #ff7043;
+  color: white;
+  padding: 0.75em 2em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 1em;
+  transition: background 0.3s ease;
+  max-width: 200px;
+}
+
+#confirmBtn:hover {
+  background: #e64a19;
+}
+
+/* Table Layout */
+.table-legend {
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+  margin: 2em auto 0;
+  font-weight: bold;
+}
+
+.table-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.table {
+  background: white;
+  border-radius: 12px;
+  font-weight: bold;
+  transition: transform 0.3s ease, background 0.3s ease;
+  padding: 1em;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+  text-align: center;
+  cursor: pointer;
+}
+
+.table:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.table.available {
+  background: #e0e0e0;
+}
+
+.table.selected {
+  background: #ff7043;
+  color: white;
+}
+
+.table.reserved {
+  background: #bdbdbd;
+  pointer-events: none;
+  color: white;
+}
+
+.table-area {
+  margin-bottom: 2em;
+}
+
+.table-area h3 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0.5em;
+  color: #444;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Footer */
+footer {
+  background: #2e2e2e;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  margin-top: 3em;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  background: #ff7043;
+  color: white;
+  padding: 0.5em 1.2em;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  transition: background 0.3s ease;
+}
+
+.social-btn:hover {
+  background: #e64a19;
+}
+
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  .table-layout {
+    grid-template-columns: 1fr;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+
+/* Select Table Button Styling */
+.start-reservation button {
+  background: #ff7043;
+  color: white;
+  padding: 1em 2.5em;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, background 0.3s ease;
+  margin: 2em auto;
+}
+
+.start-reservation button:hover {
+  background: #e64a19;
+  transform: scale(1.05);
+}
